@@ -73,5 +73,11 @@ namespace Email_mangment
         {
             Environment.Exit(0);
         }
+
+        private void addContactToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 addForm = new Form1();
+            addForm.ShowDialog();
+        }
     }
 }

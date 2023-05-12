@@ -20,3 +20,4 @@ D:\projects\Email_mangment\Email mangment\obj\Debug\Email mangment.csproj.CoreCo
 D:\projects\Email_mangment\Email mangment\obj\Debug\Email mangment.exe
 D:\projects\Email_mangment\Email mangment\obj\Debug\Email mangment.pdb
 D:\projects\Email_mangment\Email mangment\obj\Debug\Email_mangment.main.resources
+D:\projects\Email_mangment\Email mangment\obj\Debug\Email_mangment.Form1.resources
