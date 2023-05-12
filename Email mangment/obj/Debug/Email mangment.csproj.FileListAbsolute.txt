@@ -1,0 +1,11 @@
+D:\Haitham\Projects\Email mangment\Email mangment\Email mangment\bin\Debug\Email mangment.exe.config
+D:\Haitham\Projects\Email mangment\Email mangment\Email mangment\bin\Debug\Email mangment.exe
+D:\Haitham\Projects\Email mangment\Email mangment\Email mangment\bin\Debug\Email mangment.pdb
+D:\Haitham\Projects\Email mangment\Email mangment\Email mangment\obj\Debug\Email mangment.csproj.AssemblyReference.cache
+D:\Haitham\Projects\Email mangment\Email mangment\Email mangment\obj\Debug\Email mangment.csproj.SuggestedBindingRedirects.cache
+D:\Haitham\Projects\Email mangment\Email mangment\Email mangment\obj\Debug\Email_mangment.Form1.resources
+D:\Haitham\Projects\Email mangment\Email mangment\Email mangment\obj\Debug\Email_mangment.Properties.Resources.resources
+D:\Haitham\Projects\Email mangment\Email mangment\Email mangment\obj\Debug\Email mangment.csproj.GenerateResource.cache
+D:\Haitham\Projects\Email mangment\Email mangment\Email mangment\obj\Debug\Email mangment.csproj.CoreCompileInputs.cache
+D:\Haitham\Projects\Email mangment\Email mangment\Email mangment\obj\Debug\Email mangment.exe
+D:\Haitham\Projects\Email mangment\Email mangment\Email mangment\obj\Debug\Email mangment.pdb
