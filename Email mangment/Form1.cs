@@ -13,6 +13,9 @@ namespace Email_mangment
 {
     public partial class Form1 : Form
     {
+        List<string> emails = new List<string>();
+        string selectedFile;
+        bool treatAsArray=false;
         public Form1()
         {
             InitializeComponent();
@@ -36,7 +39,36 @@ namespace Email_mangment
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            selectedFile = comboBox1.Text;
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            emails.Add(textBox3.Text);
+            textBox3.Clear();
+            treatAsArray = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (treatAsArray)
+            {
+                Contact contact = new Contact(int.Parse(textBox1.Text), textBox2.Text, emails);
+                contact.save(selectedFile,treatAsArray);
+            }
+            else { 
+                Contact contact = new Contact(int.Parse(textBox1.Text), textBox2.Text, textBox3.Text);
+                contact.save(selectedFile,treatAsArray);
+            }
+            clearAddForm();
+            MessageBox.Show("The Contact Saved" ,"Note", MessageBoxButtons.OK);
+        }
+        private void clearAddForm()
+        {
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            emails.Clear();
         }
     }
 }
