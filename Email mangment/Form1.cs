@@ -53,15 +53,19 @@ namespace Email_mangment
         {
             if (treatAsArray)
             {
-                Contact contact = new Contact(int.Parse(textBox1.Text), textBox2.Text, emails);
+                Contact contact = new Contact(textBox2.Text, emails);
                 contact.save(selectedFile,treatAsArray);
             }
             else { 
-                Contact contact = new Contact(int.Parse(textBox1.Text), textBox2.Text, textBox3.Text);
+                Contact contact = new Contact(textBox2.Text, textBox3.Text);
                 contact.save(selectedFile,treatAsArray);
             }
             clearAddForm();
             MessageBox.Show("The Contact Saved" ,"Note", MessageBoxButtons.OK);
+        }
+        private void RplcLine(int pos)
+        {
+
         }
         private void clearAddForm()
         {
