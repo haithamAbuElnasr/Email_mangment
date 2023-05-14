@@ -30,16 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.contactBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contactName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Emails = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Emails = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -47,16 +47,6 @@
             // contactBindingSource
             // 
             this.contactBindingSource.DataSource = typeof(Email_mangment.Contact);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(711, 73);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -79,6 +69,23 @@
             this.dataGridView1.Size = new System.Drawing.Size(493, 426);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // contactName
+            // 
+            this.contactName.HeaderText = "Name";
+            this.contactName.Name = "contactName";
+            this.contactName.Width = 150;
+            // 
+            // Emails
+            // 
+            this.Emails.HeaderText = "Emails";
+            this.Emails.Name = "Emails";
+            this.Emails.Width = 200;
             // 
             // button2
             // 
@@ -118,35 +125,28 @@
             this.label2.Text = "Name";
             this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
-            // ID
+            // searchBtn
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // contactName
-            // 
-            this.contactName.HeaderText = "Name";
-            this.contactName.Name = "contactName";
-            this.contactName.Width = 150;
-            // 
-            // Emails
-            // 
-            this.Emails.HeaderText = "Emails";
-            this.Emails.Name = "Emails";
-            this.Emails.Width = 200;
+            this.searchBtn.Location = new System.Drawing.Point(711, 73);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(75, 23);
+            this.searchBtn.TabIndex = 5;
+            this.searchBtn.Text = "Search";
+            this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Name = "search";
             this.Text = "list";
             this.Load += new System.EventHandler(this.list_Load);
@@ -159,7 +159,6 @@
 
         #endregion
         private System.Windows.Forms.BindingSource contactBindingSource;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
@@ -169,5 +168,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn contactName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Emails;
+        private System.Windows.Forms.Button searchBtn;
     }
 }

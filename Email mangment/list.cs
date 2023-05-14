@@ -70,5 +70,16 @@ namespace Email_mangment
         {
 
         }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            string name = textBox1.Text;
+            Hashing ha = new Hashing(name);
+            int pos = ha.hash();
+            string line = File.ReadLines(comboBox1.Text).ElementAt(pos - 1);
+            dataGridView1.Rows.Clear();
+            string[] data = tokenize(line);
+            dataGridView1.Rows.Add(data[0], data[1], data[2]);
+        }
     }
 }
