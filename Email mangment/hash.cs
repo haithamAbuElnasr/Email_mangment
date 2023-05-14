@@ -12,10 +12,8 @@ namespace Email_mangment
         public int key = 0;
         public int value;
         public int mod = 200;
-        public int id;
-        public Hashing(int id, string value) {
-            int _value = stringToNumber(value);
-            this.id = id;
+        public Hashing(string value) {
+            this.value = stringToNumber(value);
         }
         private int stringToNumber(string value)
         {
@@ -28,7 +26,7 @@ namespace Email_mangment
         }
         public int hash()
         {
-            int _hash = id + value;
+            int _hash = value;
             key = _hash % 10000;
             return key % mod;
         }

@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace Email_mangment
 {
-    public partial class Form1 : Form
+    public partial class adding : Form
     {
         List<string> emails = new List<string>();
         string selectedFile;
         bool treatAsArray=false;
-        public Form1()
+        public adding()
         {
             InitializeComponent();
             init_Box();
