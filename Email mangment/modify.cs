@@ -16,5 +16,16 @@ namespace Email_mangment
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void init_values(string id,string name,string email)
+        {
+            textBox1.Text = id;
+            textBox2.Text = name;
+            textBox3.Text = email;
+        }
     }
 }

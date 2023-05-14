@@ -64,11 +64,19 @@ namespace Email_mangment
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        public void deleteRecored(string name)
+        {
+            Hashing ha = new Hashing(name);
+            int pos = ha.hash();
+            Contact cs = new Contact();
+            cs.lineChanger("\n",comboBox1.Text,pos);
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
@@ -80,6 +88,23 @@ namespace Email_mangment
             dataGridView1.Rows.Clear();
             string[] data = tokenize(line);
             dataGridView1.Rows.Add(data[0], data[1], data[2]);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            deleteRecored(dataGridView1.CurrentRow.Cells[1].Value.ToString());
+            dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            modify modi = new modify();
+            string curID = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            string curName = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            string curEmail = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+
+            modi.init_values(curID, curName, curEmail);
+            modi.ShowDialog();
         }
     }
 }

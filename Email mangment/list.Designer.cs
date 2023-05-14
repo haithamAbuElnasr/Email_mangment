@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.contactBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,13 +39,12 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.searchBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.contactBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // contactBindingSource
-            // 
-            this.contactBindingSource.DataSource = typeof(Email_mangment.Contact);
             // 
             // textBox1
             // 
@@ -59,11 +57,13 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.contactName,
             this.Emails});
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(30, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(493, 426);
@@ -135,11 +135,37 @@
             this.searchBtn.UseVisualStyleBackColor = true;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(711, 393);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Delete";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(572, 393);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Modify";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // contactBindingSource
+            // 
+            this.contactBindingSource.DataSource = typeof(Email_mangment.Contact);
+            // 
             // search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
@@ -150,8 +176,8 @@
             this.Name = "search";
             this.Text = "list";
             this.Load += new System.EventHandler(this.list_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contactBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,5 +195,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn contactName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Emails;
         private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }

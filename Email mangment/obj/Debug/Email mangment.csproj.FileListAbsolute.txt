@@ -22,3 +22,4 @@ D:\projects\Email_mangment\Email mangment\obj\Debug\Email mangment.pdb
 D:\projects\Email_mangment\Email mangment\obj\Debug\Email_mangment.main.resources
 D:\projects\Email_mangment\Email mangment\obj\Debug\Email_mangment.adding.resources
 D:\projects\Email_mangment\Email mangment\obj\Debug\Email_mangment.search.resources
+D:\projects\Email_mangment\Email mangment\obj\Debug\Email_mangment.modify.resources

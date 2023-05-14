@@ -18,13 +18,17 @@ namespace Email_mangment
             this.email = email;
             this.Name = name;
         }
+        public Contact()
+        {
+
+        }
         public Contact(string name, List<string> emails)
         {
             this.id = UUID_Gen();
             this.Name = name;
             this.emails = emails;
         }
-        static void lineChanger(string newText, string fileName, int line_to_edit)
+        public void lineChanger(string newText, string fileName, int line_to_edit)
         {
             string[] arrLine = File.ReadAllLines(fileName);
             arrLine[line_to_edit - 1] = newText;
