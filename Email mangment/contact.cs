@@ -32,7 +32,6 @@ namespace Email_mangment
         }
         public void save(string filePath, bool list)
         {
-            /*StreamWriter sw = File.AppendText(filePath);*/
             Hashing hash = new Hashing(this.Name);
             int pos = hash.hash();
             if (list)
@@ -44,7 +43,6 @@ namespace Email_mangment
             {
                 lineChanger(this.id + "|" + this.Name + "|" + this.email, filePath, pos);
             }
-            /*sw.Close();*/
         }
         private string emailsToString(List<string> emails)
         {
