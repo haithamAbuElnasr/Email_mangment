@@ -11,7 +11,7 @@ namespace Email_mangment
     {
         public int key = 0;
         public int value;
-        public int mod = 2000;
+        public int mod = 200;
         public int id;
         public Hashing(int id, string value) {
             int _value = stringToNumber(value);
@@ -29,7 +29,7 @@ namespace Email_mangment
         public int hash()
         {
             int _hash = id + value;
-            key = _hash % 1158;
+            key = _hash % 10000;
             return key % mod;
         }
     }

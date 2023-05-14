@@ -24,19 +24,34 @@ namespace Email_mangment
             this.Name = name;
             this.emails = emails;
         }
+        static void lineChanger(string newText, string fileName, int line_to_edit)
+        {
+            string[] arrLine = File.ReadAllLines(fileName);
+            arrLine[line_to_edit - 1] = newText;
+            File.WriteAllLines(fileName, arrLine);
+        }
         public void save(string filePath, bool list)
         {
-            StreamWriter sw = File.AppendText(filePath);
-            if(list)
+            /*StreamWriter sw = File.AppendText(filePath);*/
+            Hashing hash = new Hashing(this.id, this.Name);
+            int pos = hash.hash();
+            
+            if (list)
             {
                 string emails = emailsToString(this.emails);
-                sw.WriteLine(this.id + "|" + this.Name + "|" + emails);
+                lineChanger(this.id + "|" + this.Name + "|" + emails, filePath, pos);
             }
             else
             {
-                sw.WriteLine(this.id+"|"+this.Name+"|"+this.email);
+                lineChanger(this.id + "|" + this.Name + "|" + this.email, filePath, pos);
             }
-            sw.Close();
+            /*sw.Close();*/
+        }
+        private void RplcLine(int pos, string filePath)
+        {
+            string line = File.ReadLines(filePath).ElementAt(pos - 1);
+
+
         }
         private string emailsToString(List<string> emails)
         {

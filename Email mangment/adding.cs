@@ -51,21 +51,35 @@ namespace Email_mangment
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (treatAsArray)
+            if (validation())
             {
-                Contact contact = new Contact(textBox2.Text, emails);
-                contact.save(selectedFile,treatAsArray);
+                if (treatAsArray)
+                {
+                    Contact contact = new Contact(textBox2.Text, emails);                    
+                    contact.save(selectedFile, treatAsArray);
+                }
+                else
+                {
+                    Contact contact = new Contact(textBox2.Text, textBox3.Text);
+                    contact.save(selectedFile, treatAsArray);
+                }
+                clearAddForm();
+                MessageBox.Show("The Contact Saved", "Note", MessageBoxButtons.OK);
             }
-            else { 
-                Contact contact = new Contact(textBox2.Text, textBox3.Text);
-                contact.save(selectedFile,treatAsArray);
-            }
-            clearAddForm();
-            MessageBox.Show("The Contact Saved" ,"Note", MessageBoxButtons.OK);
+            
         }
-        private void RplcLine(int pos)
+        
+        private bool validation()
         {
-
+            if (textBox2.Text == string.Empty && textBox3.Text == string.Empty)
+            {
+                MessageBox.Show("You Must fill the inputs", "Error", MessageBoxButtons.OK);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
         private void clearAddForm()
         {
