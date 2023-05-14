@@ -18,6 +18,12 @@ namespace Email_mangment
             this.email = email;
             this.Name = name;
         }
+        public Contact(int id,string name, string email)
+        {
+            this.id = id;
+            this.email = email;
+            this.Name = name;
+        }
         public Contact()
         {
 

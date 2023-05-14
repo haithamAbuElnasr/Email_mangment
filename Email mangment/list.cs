@@ -102,7 +102,7 @@ namespace Email_mangment
             string curID = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             string curName = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             string curEmail = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-
+            modi.selectedFile = comboBox1.Text;
             modi.init_values(curID, curName, curEmail);
             modi.ShowDialog();
         }
