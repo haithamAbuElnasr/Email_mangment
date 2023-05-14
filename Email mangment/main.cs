@@ -89,5 +89,11 @@ namespace Email_mangment
             adding addForm = new adding();
             addForm.ShowDialog();
         }
+
+        private void searchForContactToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            search listform = new search();
+            listform.ShowDialog();
+        }
     }
 }
