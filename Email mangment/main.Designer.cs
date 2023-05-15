@@ -134,6 +134,7 @@
             this.searchForContactToolStripMenuItem.Name = "searchForContactToolStripMenuItem";
             this.searchForContactToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.searchForContactToolStripMenuItem.Text = "Search For Contact";
+            this.searchForContactToolStripMenuItem.Click += new System.EventHandler(this.searchForContactToolStripMenuItem_Click);
             // 
             // modifyContactToolStripMenuItem
             // 
@@ -152,7 +153,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 

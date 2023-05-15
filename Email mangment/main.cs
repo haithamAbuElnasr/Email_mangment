@@ -37,6 +37,8 @@ namespace Email_mangment
             if (!File.Exists(fileName))
             {
                 File.Create(Directory.GetCurrentDirectory() +"\\"+fileName).Close();
+                string[] emptySpaces = empty();
+                File.WriteAllLines(fileName,emptySpaces);
                 MessageBox.Show("File is created Successfully in the path:\n" + fileName, "Note", MessageBoxButtons.OK);
             }
             else
@@ -46,7 +48,15 @@ namespace Email_mangment
             }          
 
         }
-
+        private string[] empty()
+        {
+            string[] spaces=new string[200];
+            for (int i = 0; i < 200; i++)
+            {
+                spaces[i] = "\n";
+            }
+            return spaces;
+        }
         private void deleteFile_Click(object sender, EventArgs e)
         {
             string fileName = txtFileName.Text;
@@ -78,6 +88,12 @@ namespace Email_mangment
         {
             adding addForm = new adding();
             addForm.ShowDialog();
+        }
+
+        private void searchForContactToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            search listform = new search();
+            listform.ShowDialog();
         }
     }
 }

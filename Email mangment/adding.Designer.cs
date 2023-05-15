@@ -1,6 +1,6 @@
 ﻿namespace Email_mangment
 {
-    partial class Form1
+    partial class adding
     {
         /// <summary>
         /// Required designer variable.

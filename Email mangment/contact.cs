@@ -18,13 +18,23 @@ namespace Email_mangment
             this.email = email;
             this.Name = name;
         }
+        public Contact(int id,string name, string email)
+        {
+            this.id = id;
+            this.email = email;
+            this.Name = name;
+        }
+        public Contact()
+        {
+
+        }
         public Contact(string name, List<string> emails)
         {
             this.id = UUID_Gen();
             this.Name = name;
             this.emails = emails;
         }
-        static void lineChanger(string newText, string fileName, int line_to_edit)
+        public void lineChanger(string newText, string fileName, int line_to_edit)
         {
             string[] arrLine = File.ReadAllLines(fileName);
             arrLine[line_to_edit - 1] = newText;
@@ -32,10 +42,8 @@ namespace Email_mangment
         }
         public void save(string filePath, bool list)
         {
-            /*StreamWriter sw = File.AppendText(filePath);*/
-            Hashing hash = new Hashing(this.id, this.Name);
+            Hashing hash = new Hashing(this.Name);
             int pos = hash.hash();
-            
             if (list)
             {
                 string emails = emailsToString(this.emails);
@@ -45,13 +53,6 @@ namespace Email_mangment
             {
                 lineChanger(this.id + "|" + this.Name + "|" + this.email, filePath, pos);
             }
-            /*sw.Close();*/
-        }
-        private void RplcLine(int pos, string filePath)
-        {
-            string line = File.ReadLines(filePath).ElementAt(pos - 1);
-
-
         }
         private string emailsToString(List<string> emails)
         {
